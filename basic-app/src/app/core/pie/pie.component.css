@@ -1,0 +1,9 @@
+.container{
+    border-top: 2px solid #ff0037;
+}
+
+p {
+    font-style: italic;
+    text-align: center;
+    margin: 0rem;
+}
