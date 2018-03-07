@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'bbl-catalogo',
   template: `
     <p>
-      catalogo works!
+      catalogo works and is a Lazy Component! JAJA!
     </p>
   `,
   styles: []

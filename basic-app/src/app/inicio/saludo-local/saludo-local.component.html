@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+      <h4 class="card-title">Referencias Locales</h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Sustraccion de Datos pero un poco mal</h5>
+      <div class="form-group">
+        <label for="nombre">Nombre: </label>
+        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" #locNombre>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="locNombre.value=''" >Borrar</button>
+      <button type="button" class="btn btn-primery" (click)="locNombre.value=locNombre.value">Guardar</button>
+    </div>
+    <div class="card-footer text-muted">
+      <P>Hola {{locNombre.value}}</P>
+    </div>
+  </div>

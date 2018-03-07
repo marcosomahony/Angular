@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">
+    Componente: Hijo
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Yo: {{nombre}}</h5>
+    <p class="card-text">{{nombre}}</p>
+    <label for="nombre">Di el nombre que te mola: </label>
+    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" [(ngModel)]="miNombre">
+    <button type="button" class="btn btn-primary" (click)="btnRespuesta()" >No me gusta {{nombre}}</button>
+  </div>
+  <div class="card-footer text-muted">
+    <p>Me llamo {{nombre}}</p>
+  </div>
+</div>
