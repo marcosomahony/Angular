@@ -1,0 +1,28 @@
+1- crear modulo: 				ng g m nombre --roouting
+2- crear componente				ng g c nombre -it -is
+3- crear boton en menu
+4- crear path en app-routing: lazy
+5- exportar componente desde nombre.module.ts
+6- crear path eager sin nombre del componente en modulo-routing.ts
+
+1- crear componente normal: 			ng g c modulo/componente
+2- no hay que exportarlo, solo consumirlo en componente del modulo
+	div container
+		div row
+			app-componente
+
+
+1- importar formsmodule o lo que haga falta en el module.module.ts
+
+
+Directivas estructurales to flamas:
+*ngFor="let tarea of aTareas"
+*ngIf="aTareas.length; then ideasTemplate else vacioTemplate"
+	el then lo puedes quitar y poner el contenido en el div de la directiva.
+
+Operadores:
+{{expresiones | pipes}} los pipes me permiten modificar el formato de la salida de datos
+[] operador de propiedades
+() operador de eventos
+[()] operador de doble binding o "babana in a box"
+# operador de expresiones locales JAJA
