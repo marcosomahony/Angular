@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LibrosMocComponent } from './libros-moc.component';
+import { LibrosMocComponent } from './libros-buscar.component';
 
 describe('LibrosMocComponent', () => {
   let component: LibrosMocComponent;

@@ -4,17 +4,21 @@ import { CommonModule } from '@angular/common';
 import { LibrosRoutingModule } from './libros-routing.module';
 import { LibrosComponent } from './libros.component';
 import { BooksService } from '../servicios/books.service';
-import { LibrosMocComponent } from './libros-moc/libros-moc.component';
 import { FormsModule } from '@angular/forms';
+import { LibrosBuscarComponent } from './libros-buscar/libros-buscar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GbooksService } from '../servicios/gbooks.service';
+import { LibrosByServiceComponent } from './libros-by-service/libros-by-service.component';
 
 @NgModule({
   imports: [
     CommonModule,
     LibrosRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  declarations: [LibrosComponent, LibrosMocComponent],
-  providers: [BooksService],
+  declarations: [LibrosComponent, LibrosBuscarComponent, LibrosByServiceComponent],
+  providers: [BooksService, GbooksService],
   exports: [LibrosComponent]
 })
 export class LibrosModule { }
