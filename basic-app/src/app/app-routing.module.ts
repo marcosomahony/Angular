@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'catalogo', loadChildren: './catalogo/catalogo.module#CatalogoModule' },
   { path: 'comunics', loadChildren: './comunics/comunics.module#ComunicsModule' },
   { path: 'libros', loadChildren: './libros/libros.module#LibrosModule' },
+  { path: 'contactos', loadChildren: './contactos/contactos.module#ContactosModule' },
   { path: 'printer', loadChildren: './printer/printer.module#PrinterModule' },
   { path: 'agenda', loadChildren: './agenda/agenda.module#AgendaModule' },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },  // default: carga inicio

@@ -17,11 +17,12 @@ export class GbooksService {
 
     return this.http.get(url).toPromise()
       .then(
-        (response: any) => {
+        (response: any) => {                          // esto mejor ecapsularlo en una funcion 'privada' procesadatos()
           console.log(response);
           response.items.forEach(element => {
             this.aLibros.push(element.volumeInfo.title);
           });
+          // tslint:disable-next-line:no-shadowed-variable
           return new Promise((resolve, reject) => {
             resolve(this.aLibros);
           });
