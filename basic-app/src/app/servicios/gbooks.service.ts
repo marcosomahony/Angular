@@ -37,4 +37,21 @@ export class GbooksService {
     return this.http.get(url).toPromise();
   }
 
+  getLibrosRx(clave: string): any {
+    this.aLibros = [];
+    const url = this.urlBase + clave;
+
+    return this.http.get(url).pipe(
+      response => this.extractTitles(response));
+    // devolvemos un observable
+  }
+
+  private extractTitles(response: any) {
+    if (response.items) {
+      return response.items.map(book => book.volumeInfo.title);
+    } else {
+      return response;
+    }
+  }
+
 }

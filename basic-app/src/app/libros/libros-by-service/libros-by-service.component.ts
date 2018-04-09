@@ -6,6 +6,7 @@ import { GbooksService } from '../../servicios/gbooks.service';
   templateUrl: './libros-by-service.component.html',
   styleUrls: ['./libros-by-service.component.css']
 })
+
 export class LibrosByServiceComponent implements OnInit {
   clave: string;
   aLibros: Array<string>;
@@ -18,6 +19,12 @@ export class LibrosByServiceComponent implements OnInit {
   buscar() {
     this.gBook.getLibros(this.clave).then((response) => this.aLibros = response);
     /* this.gBook.getLibrosBasic(this.clave).then((response) => console.log(response)); */
+  }
+
+  buscarRx() {
+    this.gBook.getLibrosRx(this.clave).subscribe(
+      (response: any) => this.aLibros = response
+    );
   }
 
 }
